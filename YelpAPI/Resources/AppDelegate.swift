@@ -14,7 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //New
+        YelpController.shared.fetchBusiness(searchTerm: "tire shop") { result in
+            switch result {
+            case .failure(let error):
+                print("\(error)\n\(error.localizedDescription)")
+            case .success(let yelpData):
+                for i in yelpData.businesses {
+                    print("buissness: \(i.name) \(i.location?.city)")
+                }
+            }
+        }
+        
+        
+        //Original
+//        YelpController.shared.fetchBusiness(searchTerm: "pizza") { (result) in
+//                switch result {
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                case .success(let yelpData):
+//                    print(yelpData.businesses.count)
+//                    for i in yelpData.businesses {
+//                        print(i.name)
+//                    }
+//                }
+//        }
         return true
     }
 
