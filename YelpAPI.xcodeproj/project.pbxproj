@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C14685B297EE90400B93C5B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C14685A297EE90400B93C5B /* HomeView.swift */; };
+		1C14685E297EE92E00B93C5B /* SuggestionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C14685D297EE92E00B93C5B /* SuggestionCVCell.swift */; };
 		1C2925D92937901E00239E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2925D82937901E00239E29 /* AppDelegate.swift */; };
 		1C2925DB2937901E00239E29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2925DA2937901E00239E29 /* SceneDelegate.swift */; };
-		1C2925DD2937901E00239E29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2925DC2937901E00239E29 /* ViewController.swift */; };
 		1C2925E02937901E00239E29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2925DE2937901E00239E29 /* Main.storyboard */; };
 		1C2925E32937901E00239E29 /* YelpAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2925E12937901E00239E29 /* YelpAPI.xcdatamodeld */; };
 		1C2925E52937901F00239E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2925E42937901F00239E29 /* Assets.xcassets */; };
@@ -21,10 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C14685A297EE90400B93C5B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1C14685D297EE92E00B93C5B /* SuggestionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCVCell.swift; sourceTree = "<group>"; };
 		1C2925D52937901E00239E29 /* YelpAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2925D82937901E00239E29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2925DA2937901E00239E29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C2925DC2937901E00239E29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C2925DF2937901E00239E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C2925E22937901E00239E29 /* YelpAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YelpAPI.xcdatamodel; sourceTree = "<group>"; };
 		1C2925E42937901F00239E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C146859297EE8CC00B93C5B /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C14685A297EE90400B93C5B /* HomeView.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		1C14685C297EE91A00B93C5B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1C14685D297EE92E00B93C5B /* SuggestionCVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1C2925CC2937901E00239E29 = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +84,12 @@
 		1C2925D72937901E00239E29 /* YelpAPI */ = {
 			isa = PBXGroup;
 			children = (
+				1C14685C297EE91A00B93C5B /* Cells */,
+				1C146859297EE8CC00B93C5B /* View Controller */,
 				1C2925F62937F12C00239E29 /* NetworkErrors */,
 				1C2925F32937D54300239E29 /* NetworkControllers */,
 				1C2925F0293791AF00239E29 /* Models */,
 				1C2925EF2937908400239E29 /* Resources */,
-				1C2925DC2937901E00239E29 /* ViewController.swift */,
 				1C2925DE2937901E00239E29 /* Main.storyboard */,
 				1C2925E12937901E00239E29 /* YelpAPI.xcdatamodeld */,
 			);
@@ -188,9 +207,10 @@
 				1C2925E32937901E00239E29 /* YelpAPI.xcdatamodeld in Sources */,
 				1C2925F82937F14100239E29 /* NetworkError.swift in Sources */,
 				1C2925F22937920300239E29 /* YelpInfo.swift in Sources */,
-				1C2925DD2937901E00239E29 /* ViewController.swift in Sources */,
 				1C2925D92937901E00239E29 /* AppDelegate.swift in Sources */,
 				1C2925DB2937901E00239E29 /* SceneDelegate.swift in Sources */,
+				1C14685E297EE92E00B93C5B /* SuggestionCVCell.swift in Sources */,
+				1C14685B297EE90400B93C5B /* HomeView.swift in Sources */,
 				1C2925F52937D56000239E29 /* NetworkController.swift in Sources */,
 				1C2925FA2938086C00239E29 /* Constants.swift in Sources */,
 			);

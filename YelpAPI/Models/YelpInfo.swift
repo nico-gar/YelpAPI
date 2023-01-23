@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct YelpInfo: Decodable {
+struct YelpData: Decodable {
     var businesses: [Business]
 }
 

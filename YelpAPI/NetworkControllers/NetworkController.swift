@@ -22,7 +22,7 @@ class YelpController {
     var baseURL = URL(string: Constants.baseURL)
     
     ///This function makes a network call to the Yelp API
-    func fetchBusiness(searchTerm: String, completion: @escaping (Result<YelpInfo, YelpError>) -> Void){
+    func fetchBusiness(searchTerm: String, completion: @escaping (Result<YelpData, YelpError>) -> Void){
         // 1 - URL
         
         guard var unwrappedURL = baseURL else { return completion(.failure(.invalidURL)) } //"https://api.yelp.com/v3"
@@ -49,7 +49,9 @@ class YelpController {
         
         //include the header
         var request = URLRequest(url: builtURL)
+        
         request.allHTTPHeaderFields = Constants.header
+        
         print(request.description)
         
         /* at this point we have our fully built URL and have included the top secrete header as well:
@@ -73,7 +75,7 @@ class YelpController {
             
             // 5 - Decode Data
             do {
-                let businesses = try JSONDecoder().decode(YelpInfo.self, from: data)
+                let businesses = try JSONDecoder().decode(YelpData.self, from: data)
                 return completion(.success(businesses))
             } catch {
                 print(":(")
@@ -97,7 +99,7 @@ extension YelpController {
         static let shared = NetworkManagerV2()
         
         ///Fetch business data from the Yelp API. This method takes in a string as its parameter. The string passed in is what the Yelp API will attempt to search.
-        func fetchBusiness(type: String,completion: @escaping (Result<YelpInfo, YelpError>) -> Void ) {
+        func fetchBusiness(type: String,completion: @escaping (Result<YelpData, YelpError>) -> Void ) {
             guard var url = baseURL else {
                 completion(.failure(YelpError.invalidURL))
                 return
@@ -148,7 +150,7 @@ extension YelpController {
                 }
                 
                 do {
-                    let business = try JSONDecoder().decode(YelpInfo.self, from: data)
+                    let business = try JSONDecoder().decode(YelpData.self, from: data)
                     completion(.success(business))
                     return
                 } catch {
