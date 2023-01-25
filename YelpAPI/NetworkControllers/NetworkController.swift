@@ -19,15 +19,15 @@ class YelpController {
     /*
      At this point our URL is this: "https://api.yelp.com/v3"
      */
-    var baseURL = URL(string: Constants.baseURL)
+    var baseURL = URL(string: Constant.baseURL)
     
     ///This function makes a network call to the Yelp API
     func fetchBusiness(searchTerm: String, completion: @escaping (Result<YelpData, YelpError>) -> Void){
         // 1 - URL
         
         guard var unwrappedURL = baseURL else { return completion(.failure(.invalidURL)) } //"https://api.yelp.com/v3"
-        unwrappedURL.append(path: Constants.buissnessComponent)//"https://api.yelp.com/v3/businesses"
-        unwrappedURL.append(path: Constants.searchComponent) // "https://api.yelp.com/v3/businesses/search"
+        unwrappedURL.append(path: Constant.buissnessComponent)//"https://api.yelp.com/v3/businesses"
+        unwrappedURL.append(path: Constant.searchComponent) // "https://api.yelp.com/v3/businesses/search"
         print(unwrappedURL.description)
         
         var urlComponents = URLComponents(url: unwrappedURL, resolvingAgainstBaseURL: true)
@@ -50,7 +50,7 @@ class YelpController {
         //include the header
         var request = URLRequest(url: builtURL)
         
-        request.allHTTPHeaderFields = Constants.header
+        request.allHTTPHeaderFields = Constant.header
         
         print(request.description)
         
@@ -125,7 +125,7 @@ extension YelpController {
             var request = URLRequest(url: builtURL)
             
             //The Yelp API requires a header value be provided
-            request.allHTTPHeaderFields = Constants.header
+            request.allHTTPHeaderFields = Constant.header
             
             //NOTE: - If you'd like to plug in your builtURL URL into a search browser to see the JSON, you need to account for the required header value. Without the header, the URL request inside a web browser will not work. Consider using an API client like Postman that easily allows a header to be provided in order to see the JSON result
             print("[NetworkManager] - \(#function) builtURL: \(builtURL.description)")

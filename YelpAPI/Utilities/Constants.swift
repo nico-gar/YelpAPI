@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Constants {
+struct Constant {
     static let baseURL = "https://api.yelp.com/v3"
     static let buissnessComponent = "businesses"
     static let searchComponent = "search"
