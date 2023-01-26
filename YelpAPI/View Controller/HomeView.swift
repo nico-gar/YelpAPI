@@ -12,7 +12,9 @@ class HomeView: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var OrderNowView: UIView!
-    @IBOutlet weak var orderButton: IRButton!
+//    @IBOutlet weak var orderButton: IRButton!
+    
+    @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var suggestionCollectionView: UICollectionView!
     @IBOutlet weak var locationLabel: UILabel!
@@ -142,11 +144,15 @@ class HomeView: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         
         if segue.identifier == "toCategoryVC" {
-            guard let destinationVC = segue.destination as? CategoryTVC,
+            guard let destinationVC = segue.destination as? CategoryTVC else { print("something is wrong with our destination")
+                return }
                   
-                    let cell = sender as? CategoryCVCell,
+            guard let cell = sender as? CategoryCVCell
+            else { print("something is wrong with our cell")
+                return }
                   
-                    let indexPath = self.categoryCollectionView.indexPath(for: cell) else { return }
+                    guard let indexPath = self.categoryCollectionView.indexPath(for: cell) else { print("there is something wrong with our index path")
+                        return }
             
             let selectedCategory = CategoryOptions.categories[indexPath.row]
             

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vzc-Wo-5aQ" userLabel="Suggestion Collection View">
-                                <rect key="frame" x="5" y="587.66666666666663" width="377" height="238.33333333333337"/>
+                                <rect key="frame" x="5" y="587.33333333333337" width="377" height="238.33333333333337"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4ph-Ph-Q6B">
                                     <size key="itemSize" width="158" height="267"/>
@@ -29,7 +29,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="suggestionCell" id="jGR-4M-V08" customClass="SuggestionCVCell" customModule="YelpAPI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-18.333333333333332" width="158" height="267"/>
+                                        <rect key="frame" x="0.0" y="-18" width="158" height="267"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RI6-4B-Axl">
                                             <rect key="frame" x="0.0" y="0.0" width="158" height="267"/>
@@ -94,19 +94,19 @@
                                             <outlet property="cheeseLabel" destination="c3K-2W-eYv" id="hPC-cI-X3g"/>
                                             <outlet property="nameLabel" destination="pch-ib-jU0" id="e0l-A4-oDo"/>
                                             <outlet property="priceLabel" destination="8E1-3F-7mt" id="WUq-MG-CQF"/>
-                                            <segue destination="UIt-aB-nOw" kind="presentation" id="kbE-Am-0j2"/>
+                                            <segue destination="UIt-aB-nOw" kind="presentation" identifier="toDetailView" id="kbE-Am-0j2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-YZ-Pxz">
-                                <rect key="frame" x="10" y="557.66666666666663" width="134" height="28.333333333333371"/>
+                                <rect key="frame" x="10" y="557.33333333333337" width="134" height="28.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9A-aI-DtO">
-                                <rect key="frame" x="10" y="421.66666666666669" width="367" height="111.00000000000006"/>
+                                <rect key="frame" x="10" y="421.33333333333331" width="367" height="110.99999999999994"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="qOn-X6-c77"/>
@@ -119,7 +119,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="IhE-d0-t9D" customClass="CategoryCVCell" customModule="YelpAPI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-2.3333333333333335" width="134" height="116"/>
+                                        <rect key="frame" x="0.0" y="-2.6666666666666665" width="134" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ip9-R1-hbO">
                                             <rect key="frame" x="0.0" y="0.0" width="134" height="116"/>
@@ -157,13 +157,13 @@
                                         <connections>
                                             <outlet property="categoryImageView" destination="deg-9l-YlX" id="Xba-PZ-Eoy"/>
                                             <outlet property="categoryTitle" destination="DiO-54-kxD" id="Zym-yb-5nH"/>
-                                            <segue destination="SK5-UJ-bAM" kind="show" id="P1m-XT-4DV"/>
+                                            <segue destination="SK5-UJ-bAM" kind="show" identifier="toCategoryVC" id="P1m-XT-4DV"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0x4-lo-jdH" userLabel="Order Now View">
-                                <rect key="frame" x="50" y="154" width="293" height="177"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0x4-lo-jdH" userLabel="Order Now View">
+                                <rect key="frame" x="50" y="154" width="293" height="202.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Driver" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-Yf-NlB">
                                         <rect key="frame" x="160" y="14" width="234" height="163"/>
@@ -183,17 +183,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-Ph-CGv" customClass="IRButton">
-                                        <rect key="frame" x="8" y="118" width="133" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odF-Tg-CDr">
+                                        <rect key="frame" x="27" y="110" width="111" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="orderButtonTapped:" destination="AQs-kN-ok2" eventType="touchUpInside" id="Ul2-eJ-2Qp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBl-Fi-miO">
-                                <rect key="frame" x="10" y="377.66666666666669" width="179" height="29"/>
+                                <rect key="frame" x="10" y="377.66666666666669" width="179" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -221,7 +224,7 @@
                             <constraint firstItem="xhF-0w-Eh6" firstAttribute="trailing" secondItem="0x4-lo-jdH" secondAttribute="trailing" constant="50" id="6d5-aB-YuZ"/>
                             <constraint firstItem="xhF-0w-Eh6" firstAttribute="bottom" secondItem="No4-w9-Yar" secondAttribute="bottom" constant="753.5" id="6oN-TP-QbA"/>
                             <constraint firstItem="vzc-Wo-5aQ" firstAttribute="top" secondItem="VeH-YZ-Pxz" secondAttribute="bottom" constant="1.4999999999998863" id="9eZ-jl-dDW"/>
-                            <constraint firstAttribute="bottom" secondItem="0x4-lo-jdH" secondAttribute="bottom" constant="580" id="9jE-Hw-FKf"/>
+                            <constraint firstAttribute="bottom" secondItem="0x4-lo-jdH" secondAttribute="bottom" constant="495" id="9jE-Hw-FKf"/>
                             <constraint firstItem="vzc-Wo-5aQ" firstAttribute="top" secondItem="d9A-aI-DtO" secondAttribute="bottom" constant="55" id="AH1-Px-fle"/>
                             <constraint firstItem="xhF-0w-Eh6" firstAttribute="trailing" secondItem="VeH-YZ-Pxz" secondAttribute="trailing" constant="249" id="CYY-lK-dif"/>
                             <constraint firstItem="d9A-aI-DtO" firstAttribute="centerX" secondItem="vzc-Wo-5aQ" secondAttribute="centerX" id="CtQ-xQ-oUy"/>
@@ -248,18 +251,18 @@
                         <outlet property="driverImage" destination="NGU-Yf-NlB" id="CQO-kr-eVA"/>
                         <outlet property="locationIconImage" destination="kCq-hJ-tcf" id="tYO-5B-MfR"/>
                         <outlet property="locationLabel" destination="Oal-da-YWd" id="phw-vs-mpD"/>
-                        <outlet property="orderButton" destination="uaH-Ph-CGv" id="XfQ-D4-Uvt"/>
+                        <outlet property="orderButton" destination="odF-Tg-CDr" id="P3Y-Za-JH2"/>
                         <outlet property="suggestionCollectionView" destination="vzc-Wo-5aQ" id="wbZ-iI-3fh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvK-pm-lX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="-30"/>
+            <point key="canvasLocation" x="1730.534351145038" y="-30.281690140845072"/>
         </scene>
-        <!--Table View Controller-->
+        <!--CategoryTVC-->
         <scene sceneID="COf-Pd-Mo2">
             <objects>
-                <tableViewController id="SK5-UJ-bAM" sceneMemberID="viewController">
+                <tableViewController id="SK5-UJ-bAM" customClass="CategoryTVC" customModule="YelpAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FoW-Sr-hDT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +276,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="UIt-aB-nOw" kind="presentation" id="Dey-j9-Jfz"/>
+                                    <segue destination="UIt-aB-nOw" kind="presentation" identifier="toDetailView" id="Dey-j9-Jfz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -299,15 +302,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xUa-7F-B6z">
                                 <rect key="frame" x="0.0" y="-14" width="393" height="431.33333333333331"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-Ef-aDc" customClass="IRButton" customModule="YelpAPI" customModuleProvider="target">
-                                <rect key="frame" x="152" y="747.33333333333337" width="208" height="86"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="JwA-b8-Owh"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Add to Cart"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-cE-6ba">
                                 <rect key="frame" x="344" y="78" width="16" height="34"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -440,6 +434,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-Ef-aDc" customClass="IRButton" customModule="YelpAPI" customModuleProvider="target">
+                                <rect key="frame" x="152" y="685" width="208" height="86"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="JwA-b8-Owh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add to Cart"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="UIt-aB-nOw" eventType="touchUpInside" id="pzL-Af-SlR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tu6-GK-16m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -469,7 +475,7 @@
                             <constraint firstAttribute="trailing" secondItem="xUa-7F-B6z" secondAttribute="trailing" id="s9d-Sj-JD0"/>
                             <constraint firstItem="tu6-GK-16m" firstAttribute="bottom" secondItem="e9C-Ts-pqB" secondAttribute="bottom" constant="309" id="sDc-aV-vG0"/>
                             <constraint firstAttribute="bottom" secondItem="eaG-FP-rDg" secondAttribute="bottom" constant="450.5" id="zb8-64-dez"/>
-                            <constraint firstItem="tu6-GK-16m" firstAttribute="bottom" secondItem="GCN-Ef-aDc" secondAttribute="bottom" constant="27" id="zoW-Ee-yLR"/>
+                            <constraint firstItem="tu6-GK-16m" firstAttribute="bottom" secondItem="GCN-Ef-aDc" secondAttribute="bottom" constant="89.333333333333371" id="zoW-Ee-yLR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -511,7 +517,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dey-j9-Jfz"/>
+        <segue reference="kbE-Am-0j2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AstroPizzaDude" width="626" height="626"/>
